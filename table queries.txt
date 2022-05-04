@@ -1,0 +1,41 @@
+Table queries
+-------------------------------------------------------------------------------------------------
+1. Std_Admission table :	
+
+CREATE TABLE `u917716931_ctz_db`.`Std_Admisssion` ( `ID` INT NOT NULL AUTO_INCREMENT , `Date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `student_name` VARCHAR(50) NOT NULL , `roll_no` VARCHAR(10) NOT NULL , `class` VARCHAR(20) NOT NULL , `gender` VARCHAR(20) NULL , `father_name` VARCHAR(50) NULL , `mother_name` VARCHAR(50) NULL , `religion` VARCHAR(20) NULL , `nationality` VARCHAR(10) NULL , `contact` BIGINT(10) NOT NULL , `email` VARCHAR(50) NULL , `address` VARCHAR(200) NULL , PRIMARY KEY (`ID`), UNIQUE (`roll_no`)) ENGINE = InnoDB;
+
+2. Std_Admission_bkp table :
+
+CREATE TABLE `u917716931_ctz_db`.`Std_Admisssion_bkp` ( `ID` INT NOT NULL AUTO_INCREMENT , `Date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `student_name` VARCHAR(50) NOT NULL , `roll_no` VARCHAR(10) NOT NULL , `class` VARCHAR(20) NOT NULL , `gender` VARCHAR(20) NULL , `father_name` VARCHAR(50) NULL , `mother_name` VARCHAR(50) NULL , `religion` VARCHAR(20) NULL , `nationality` VARCHAR(10) NULL , `contact` BIGINT(10) NOT NULL , `email` VARCHAR(50) NULL , `address` VARCHAR(200) NULL , PRIMARY KEY (`ID`), UNIQUE (`roll_no`)) ENGINE = InnoDB;
+
+3. adminlogin table :
+
+CREATE TABLE `u917716931_ctz_db`.`adminlogin` ( `ID` INT NOT NULL AUTO_INCREMENT , `Date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `value` VARCHAR(200) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+4. fee_deetails table :
+
+CREATE TABLE `u917716931_ctz_db`.`fee_deetails_OL` ( `ID` INT NOT NULL AUTO_INCREMENT , `Date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `student_name` VARCHAR(50) NOT NULL , `roll_no` VARCHAR(10) NOT NULL , `class` VARCHAR(10) NOT NULL , `total_fees` INT(100) NOT NULL , `pay` INT(100) NOT NULL , `total_paid` INT(100) NOT NULL , `balance` INT(100) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+5. std_report bkp1 and less than 7 tables :
+
+CREATE TABLE `u917716931_ctz_db`.`std_report_0L` ( `ID` INT NOT NULL AUTO_INCREMENT , `DATE` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `student_name` VARCHAR(1000) NOT NULL , `class` VARCHAR(34) NOT NULL , `roll_no` VARCHAR(100) NOT NULL , `exam_type` VARCHAR(100) NOT NULL , `telugu` INT(100) NOT NULL , `hindi` INT(100) NOT NULL , `english` INT(100) NOT NULL , `maths` INT(100) NOT NULL , `science` INT(100) NOT NULL DEFAULT '0' , `social` INT(100) NOT NULL , `total` INT(100) NOT NULL , `percentage` INT(100) NOT NULL , `updated_by` VARCHAR(100) NOT NULL , `status` VARCHAR(100) NOT NULL DEFAULT 'Pending' , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+6. std_report bkp2 and greater than 7 tables :
+
+CREATE TABLE `u917716931_ctz_db`.`std_report_10` ( `ID` INT NOT NULL AUTO_INCREMENT , `DATE` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `student_name` VARCHAR(1000) NOT NULL , `class` VARCHAR(34) NOT NULL , `roll_no` VARCHAR(100) NOT NULL , `exam_type` VARCHAR(100) NOT NULL , `telugu` INT(100) NOT NULL , `hindi` INT(100) NOT NULL , `english` INT(100) NOT NULL , `maths` INT(100) NOT NULL , `physics` INT(100) NOT NULL DEFAULT '0' ,`biology` INT(100) NOT NULL DEFAULT '0' , `social` INT(100) NOT NULL , `total` INT(100) NOT NULL , `percentage` INT(100) NOT NULL , `updated_by` VARCHAR(100) NOT NULL , `status` VARCHAR(100) NOT NULL DEFAULT 'Pending' , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+7. Requests table :
+
+CREATE TABLE `u917716931_ctz_db`.`requests` ( `ID` INT NOT NULL AUTO_INCREMENT , `DATE` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `subject` VARCHAR(100) NOT NULL , `full_name` VARCHAR(100) NULL , `user_id` VARCHAR(100) NULL , `start_date` DATE NULL , `end_date` DATE NULL , `reason` VARCHAR(1000) NULL , `request` VARCHAR(1000) NULL , `status` VARCHAR(1001) NOT NULL DEFAULT 'Pending' , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+8. absent_data table :
+
+CREATE TABLE `u917716931_ctz_db`.`absent_data` ( `ID` INT(100) NOT NULL AUTO_INCREMENT , `mobile` BIGINT(50) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+9. faculty_reg table :
+
+CREATE TABLE `u917716931_ctz_db`.`faculty_reg` ( `ID` INT NOT NULL AUTO_INCREMENT , `DATE` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `first_name` VARCHAR(50) NOT NULL , `last_name` VARCHAR(50) NOT NULL , `user_id` VARCHAR(50) NOT NULL , `qualification` VARCHAR(50) NOT NULL , `guardian` VARCHAR(50) NOT NULL , `mobile` BIGINT(100) NOT NULL , `email` VARCHAR(50) NOT NULL , `subject` VARCHAR(50) NOT NULL , `dob` DATE NOT NULL , `age` INT(10) NOT NULL , `gender` VARCHAR(50) NOT NULL , `marital` VARCHAR(50) NOT NULL , `religion` VARCHAR(50) NOT NULL , `nationality` VARCHAR(50) NOT NULL DEFAULT 'India' , `city` VARCHAR(50) NOT NULL DEFAULT 'Nellore' , `state` VARCHAR(50) NOT NULL DEFAULT 'Andhra Pradesh' , `zip` INT(10) NULL , `password` VARCHAR(50) NOT NULL , `salary` INT(50) NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+
+10. faculty_salary table :
+
+CREATE TABLE `u917716931_ctz_db`.`faculty_salary` ( `ID` INT NOT NULL AUTO_INCREMENT , `DATE` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `first_name` VARCHAR(50) NOT NULL , `last_name` VARCHAR(50) NOT NULL , `user_id` VARCHAR(50) NOT NULL , `mobile` BIGINT(50) NOT NULL , `salary` INT(50) NOT NULL , `status` VARCHAR(50) NULL DEFAULT 'NA' , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
